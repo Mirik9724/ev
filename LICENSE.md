@@ -1,1 +1,1 @@
-All rights reserved
+(c) 2024 All rights reserved
