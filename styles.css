@@ -60,17 +60,8 @@ footer {
     place-items: center; /* Центрирование по горизонтали и вертикали */
 }
 
-.iframe-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    padding: 0 20px; /* Отступы по бокам */
-}
-
-.iframe-container iframe {
-    width: 100%;
-    max-width: 1245px;
-    height: 300px;
+iframe{
+    margin: 7px
 }
 
 p, h1, h2, h3, h4, h5, h6, img{
