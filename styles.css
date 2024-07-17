@@ -26,7 +26,11 @@ header {
     }
 
 body {
-    background: url("img/ff740547056cee362a1f4c7144153c24.jpg");
+    background: url("img/wallpaper-1.webp");
+    background-size: cover; /* Растягивать изображение на всю область фона */
+    background-repeat: no-repeat; /* Не повторять изображение */
+    background-attachment: fixed; /* Фон остаётся зафиксированным при прокрутке */
+
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     color: #ffffff;
@@ -60,8 +64,8 @@ footer {
     place-items: center; /* Центрирование по горизонтали и вертикали */
 }
 
-iframe{
-    margin: 7px
+.margin-b{
+    margin-bottom: 0
 }
 
 p, h1, h2, h3, h4, h5, h6, img{
