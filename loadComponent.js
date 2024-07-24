@@ -11,9 +11,4 @@ document.addEventListener("DOMContentLoaded", function() {
     loadComponent('footer.html', 'footer-placeholder');
 });
 
-function showRickRollVideo() {
-            var video = document.getElementById('video-player');
-            video.style.display = 'block'; // Показать видео
-            video.play(); // Запустить воспроизведение
-            video.volume = 1.0; // Установить максимальную громкость
-        }
+
