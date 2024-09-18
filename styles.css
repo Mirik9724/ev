@@ -43,6 +43,12 @@ footer {
     text-align: center; /* Центрирование текста */
     padding: 5px 0; /* Отступы сверху и снизу */
 }
+a{
+    color: #dfe4f2
+}
+a:hover{
+    color: #cfdafc
+}
 
 .social-icons {
     display: flex; /* Располагаем иконки в ряд */
