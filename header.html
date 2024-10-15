@@ -2,7 +2,18 @@
     <img id="logo" src="img/Ender_Vanilla.webp" alt="Логотип сайта">
     <nav>
         <a href="/">Главная</a>
-        <a href="//shop" target="_blank">Донат</a>
+        <a href="#" onclick="redirectToSubdomain()">Донат</a>
+
+<script>
+function redirectToSubdomain() {
+    // Получаем текущий домен и добавляем поддомен
+    const currentDomain = window.location.hostname;
+    const subdomain = 'shop.' + currentDomain;
+    // Перенаправляем пользователя
+    window.location.href = '//' + subdomain;
+}
+</script>
+
         <a href="map">Веб карта</a>
         <a href="#socseti">Контакты</a>
         <a href="faq">FAQ</a>
