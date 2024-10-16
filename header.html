@@ -13,17 +13,23 @@
 </header>
 
 <script>
-function redirectToSubdomain(event) {
-    event.preventDefault(); // Останавливает стандартное действие ссылки
-    let currentDomain = window.location.hostname;
+document.addEventListener('DOMContentLoaded', function() {
+    // Добавляем обработчик для ссылки "Донат"
+    const donateLink = document.querySelector('a[href="#"]');
+    if (donateLink) {
+        donateLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            let currentDomain = window.location.hostname;
 
-    // Убираем "www." если оно присутствует
-    if (currentDomain.startsWith('www.')) {
-        currentDomain = currentDomain.substring(4);
+            // Убираем "www." если оно присутствует
+            if (currentDomain.startsWith('www.')) {
+                currentDomain = currentDomain.substring(4);
+            }
+
+            // Создаем поддомен и делаем редирект
+            const subdomain = 'shop.' + currentDomain;
+            window.location.href = '//' + subdomain;
+        });
     }
-
-    // Создаем поддомен и делаем редирект
-    const subdomain = 'shop.' + currentDomain;
-    window.location.href = '//' + subdomain;
-}
+});
 </script>
