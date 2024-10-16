@@ -14,12 +14,15 @@
 
 <script>
 function redirectToSubdomain() {
-    // Получаем текущий домен
+    // Проверяем, является ли это локальным хостом
     const currentDomain = window.location.hostname;
-    // Формируем URL для поддомена shop
-    const subdomain = 'shop.' + currentDomain;
-    
-    // Перенаправляем на поддомен
-    window.location.href = '//' + subdomain;
+
+    // Если это локальный хост, указываем тестовый поддомен
+    if (currentDomain === 'localhost') {
+        window.location.href = '//shop.localhost';
+    } else {
+        // Иначе создаем поддомен для текущего домена
+        window.location.href = '//' + 'shop.' + currentDomain;
+    }
 }
 </script>
