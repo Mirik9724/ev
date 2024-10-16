@@ -1,0 +1,17 @@
+<a href="#" onclick="redirectToSubdomain(event)">Донат</a>
+
+<script>
+function redirectToSubdomain(event) {
+    event.preventDefault(); // Останавливает стандартное действие ссылки
+    let currentDomain = window.location.hostname;
+
+    // Убираем "www." если оно присутствует
+    if (currentDomain.startsWith('www.')) {
+        currentDomain = currentDomain.substring(4);
+    }
+
+    // Создаем поддомен и делаем редирект
+    const subdomain = 'shop.' + currentDomain;
+    window.location.href = '//' + subdomain;
+}
+</script>
