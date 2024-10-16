@@ -14,10 +14,12 @@
 
 <script>
 function redirectToSubdomain() {
-    // Получаем текущий домен и добавляем поддомен
+    // Получаем текущий домен
     const currentDomain = window.location.hostname;
+    // Формируем URL для поддомена shop
     const subdomain = 'shop.' + currentDomain;
-    // Перенаправляем пользователя
+    
+    // Перенаправляем на поддомен
     window.location.href = '//' + subdomain;
 }
 </script>
