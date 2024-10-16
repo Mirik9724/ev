@@ -13,8 +13,8 @@
 </header>
 
 <script>
-function redirectToSubdomain() {
-    // Получаем текущий домен
+function redirectToSubdomain(event) {
+    event.preventDefault(); // Останавливает стандартное действие ссылки
     let currentDomain = window.location.hostname;
 
     // Убираем "www." если оно присутствует
@@ -22,7 +22,7 @@ function redirectToSubdomain() {
         currentDomain = currentDomain.substring(4);
     }
 
-    // Создаем поддомен и редиректим
+    // Создаем поддомен и делаем редирект
     const subdomain = 'shop.' + currentDomain;
     window.location.href = '//' + subdomain;
 }
