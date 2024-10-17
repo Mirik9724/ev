@@ -11,13 +11,14 @@
         <a href="evl">Launcher</a>
         <a href="/ua">UA</a>
     </nav>
-
-
-    <script>
-function redirectToShop() {
-    const currentDomain = window.location.hostname;
-    const subdomain = 'shop.' + currentDomain;
-    window.location.href = '//' + subdomain;
-}
-</script>
 </header>
+
+<script>
+window.addEventListener('hashchange', function() {
+    if (window.location.hash === '#shop') {
+        const currentDomain = window.location.hostname;
+        const subdomain = 'shop.' + currentDomain;
+        window.location.href = '//' + subdomain;
+    }
+});
+</script>
