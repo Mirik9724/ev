@@ -2,12 +2,18 @@ function loadComponent(url, elementId) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(elementId).innerHTML = data;
+            const container = document.getElementById(elementId);
+            container.innerHTML = data;
+
+            // Выполняем встроенные скрипты
+            const scripts = container.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                eval(scripts[i].innerText); // Выполняем скрипт
+            }
         })
         .catch(error => console.error('Ошибка при загрузке компонента:', error));
 }
 
-// Загружаем хедер и футер после загрузки страницы
 document.addEventListener("DOMContentLoaded", function() {
     loadComponent('header.html', 'header-placeholder');
     loadComponent('footer.html', 'footer-placeholder');
