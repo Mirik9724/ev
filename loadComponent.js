@@ -5,17 +5,17 @@ function loadComponent(url, elementId) {
             const container = document.getElementById(elementId);
             container.innerHTML = data;
 
-            // Извлекаем и выполняем все скрипты после вставки контента
-            const scripts = container.querySelectorAll('script');
-            scripts.forEach(script => {
-                const newScript = document.createElement('script');
-                if (script.src) {
-                    newScript.src = script.src;
+            // Выполнение скриптов
+            const scripts = container.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                const script = document.createElement('script');
+                if (scripts[i].src) {
+                    script.src = scripts[i].src;
                 } else {
-                    newScript.innerHTML = script.innerHTML;
+                    script.innerHTML = scripts[i].innerHTML;
                 }
-                document.body.appendChild(newScript); // Добавляем скрипт в тело страницы
-            });
+                document.body.appendChild(script); // Вставляем скрипт в тело страницы
+            }
         })
         .catch(error => console.error('Ошибка при загрузке компонента:', error));
 }
