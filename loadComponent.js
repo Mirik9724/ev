@@ -5,11 +5,17 @@ function loadComponent(url, elementId) {
             const container = document.getElementById(elementId);
             container.innerHTML = data;
 
-            // Выполняем встроенные скрипты
-            const scripts = container.getElementsByTagName('script');
-            for (let i = 0; i < scripts.length; i++) {
-                eval(scripts[i].innerText); // Выполняем скрипт
-            }
+            // Извлекаем и выполняем все скрипты после вставки контента
+            const scripts = container.querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                if (script.src) {
+                    newScript.src = script.src;
+                } else {
+                    newScript.innerHTML = script.innerHTML;
+                }
+                document.body.appendChild(newScript); // Добавляем скрипт в тело страницы
+            });
         })
         .catch(error => console.error('Ошибка при загрузке компонента:', error));
 }
