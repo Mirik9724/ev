@@ -13,12 +13,12 @@
     </nav>
 </header>
 
+<a href="#shop" onclick="redirectToShop()">Донат</a>
+
 <script>
 function redirectToShop() {
     const currentDomain = window.location.hostname;
-    const shopSubdomain = 'shop.' + currentDomain;
-    
-    // Перенаправляем пользователя на поддомен
-    window.location.href = '//' + shopSubdomain;
+    const subdomain = 'shop.' + currentDomain;
+    window.location.href = '//' + subdomain;
 }
 </script>
