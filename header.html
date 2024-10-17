@@ -3,7 +3,7 @@
     <img id="logo" src="img/Ender_Vanilla.webp" alt="Логотип сайта">
     <nav>
         <a href="/">Главная</a>
-        <a href="#" onclick="redirectToSubdomain()">Донат</a>
+        <a href="#shop" onclick="redirectToSubdomain()">Донат</a>
         <a href="map">Веб карта</a>
         <a href="#socseti">Контакты</a>
         <a href="faq">FAQ</a>
@@ -12,3 +12,13 @@
         <a href="/ua">UA</a>
     </nav>
 </header>
+
+<script>
+function redirectToShop() {
+    const currentDomain = window.location.hostname;
+    const shopSubdomain = 'shop.' + currentDomain;
+    
+    // Перенаправляем пользователя на поддомен
+    window.location.href = '//' + shopSubdomain;
+}
+</script>
