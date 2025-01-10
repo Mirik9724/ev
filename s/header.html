@@ -1,0 +1,24 @@
+<script src="loadComponent.js" defer></script>
+<header>
+    <img id="logo" src="img/Ender_Vanilla.webp" alt="Логотип сайта">
+    <nav>
+        <a href="/">Главная</a>
+        <a href="#shop" onclick="redirectToShop()">Донат</a>
+        <a href="map">Веб карта</a>
+        <a href="#socseti">Контакты</a>
+        <a href="faq">FAQ</a>
+        <a href="wiki">Wiki</a>
+        <a href="evl">Launcher</a>
+        <a href="/ua">UA</a>
+    </nav>
+</header>
+
+<script>
+window.addEventListener('hashchange', function() {
+    if (window.location.hash === '#shop') {
+        const currentDomain = window.location.hostname;
+        const subdomain = 'shop.' + currentDomain;
+        window.location.href = '//' + subdomain;
+    }
+});
+</script>
