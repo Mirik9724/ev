@@ -41,15 +41,17 @@ body {
 }   
 
 footer {
-    background-color: #333333; /* Темный фон для футера */
-    color: #FFFFFF; /* Белый цвет текста */
-    text-align: center; /* Центрирование текста */
-    padding: 5px 0; /* Отступы сверху и снизу */
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
+    background-color: #333333; /* Темный фон для футера */
+    color: #FFFFFF; /* Белый цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 5px 0; /* Отступы сверху и снизу */
 }
+
 a{
     color: #dfe4f2
 }
