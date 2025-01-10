@@ -38,13 +38,6 @@ body {
     margin: 0;
     
     }
-} 
-
-.con {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }   
 
 footer {
@@ -79,6 +72,10 @@ a:hover{
     display: grid;
     place-items: center; /* Центрирование по горизонтали и вертикали */
     flex: 1; /* Заполняет доступное пространство */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .margin-b{
