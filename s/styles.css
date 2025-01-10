@@ -54,11 +54,6 @@ a:hover{
     color: #cfdafc
 }
 
-.content {
-    flex: 1; /* Заполняет доступное пространство */
-}
-
-
 .social-icons {
     display: flex; /* Располагаем иконки в ряд */
     justify-content: center; /* Центрируем их по горизонтали */
@@ -77,6 +72,7 @@ a:hover{
 .center-hor{
     display: grid;
     place-items: center; /* Центрирование по горизонтали и вертикали */
+    flex: 1; /* Заполняет доступное пространство */
 }
 
 .margin-b{
