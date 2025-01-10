@@ -26,7 +26,7 @@ header {
     }
 
 body {
-    background: url("img/wallpaper-1.webp");
+    background: url("wp.webp");
     background-size: cover; /* Растягивать изображение на всю область фона */
     background-repeat: no-repeat; /* Не повторять изображение */
     background-attachment: fixed; /* Фон остаётся зафиксированным при прокрутке */
