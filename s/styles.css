@@ -39,7 +39,7 @@ body {
     }
 }   
 
-footer {
+.footer {
     background-color: #333333; /* Темный фон для футера */
     color: #FFFFFF; /* Белый цвет текста */
     text-align: center; /* Центрирование текста */
