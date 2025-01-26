@@ -1,1 +1,1 @@
-(c) 2023-2024 All rights reserved
+(c) 2023-2025 All rights reserved by Mirik9724
