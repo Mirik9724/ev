@@ -68,6 +68,7 @@ a:hover{
 .center-hor{
     display: grid;
     place-items: center; /* Центрирование по горизонтали и вертикали */
+    flex: 1; /* Заполняет доступное пространство */
 }
 
 .margin-b{
